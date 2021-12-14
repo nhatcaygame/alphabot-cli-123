@@ -8,7 +8,7 @@
  * @link        https://www.facebook.com/taolagin2003
  */
 
-global.Core = require('./Core'); 
+global.core = require('./core'); 
 const pkgDir = require('pkg-dir');
 const minimist = require('minimist');
 const {redLog} = require('./Helpers.js');
@@ -18,8 +18,8 @@ const argv = minimist(process.argv.slice(2));
     global.alphabotDir = await pkgDir(process.cwd());
     const notFound = true;
 
-    for (const name in global.Core){
-        const {keywords, params, fn} = global.Core[name];
+    for (const name in global.core){
+        const {keywords, params, fn} = global.core[name];
         const method = argv._[0];
 
         try {
@@ -42,6 +42,6 @@ const argv = minimist(process.argv.slice(2));
         }
     }
     if (notFound) {
-		global.Core.help.fn();
+		global.core.help.fn();
 	}
 })();
