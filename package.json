@@ -1,0 +1,38 @@
+{
+  "name": "alphabot-cli",
+  "version": "1.2.1",
+  "description": "Simple bot chat facebook messenger by GinStudio",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhatcaygame/alphabot-cli.git"
+  },
+  "keywords": [
+    "Alphabot",
+    "Chatbox",
+    "Facebook",
+    "Messenger",
+    "GinStudio"
+  ],
+  "author": "Vu Minh Nhat, GinStudio",
+  "license": "GNU-v3",
+  "bugs": {
+    "url": "https://github.com/nhatcaygame/alphabot-cli/issues"
+  },
+  "homepage": "https://github.com/nhatcaygame/alphabot-cli#readme",
+  "dependencies": {
+    "alphabot-cli": "^1.2.1",
+    "ejs": "^3.1.6",
+    "g": "^2.0.1",
+    "minimist": "^1.2.5",
+    "node-color-log": "^7.0.0",
+    "pkg-dir": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.4.1"
+  },
+  "bin": "./index.js"
+}
