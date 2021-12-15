@@ -16,7 +16,11 @@ const argv = minimist(process.argv.slice(2));
 
 (async () => {
     global.alphabotDir = await pkgDir(process.cwd());
-    const notFound = true;
+
+	/**
+	 * Const Varialble Alert
+	 */
+    let notFound = true;
 
     for (const name in global.core){
         const {keywords, params, fn} = global.core[name];

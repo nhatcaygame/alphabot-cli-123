@@ -12,13 +12,13 @@ module.exports = {
     params: [],
     description: 'Hiển Thị Danh Sách Lệnh',
     fn: async () => {
-        const index = 0;
-        for (const name in global.Core){
-            const { keywords , params ,description } = global.Core[name];
+        let index = 0;
+        for (const name in global.core){
+            const { keywords , params ,description } = global.core[name];
             if(keywords.length > 0){
                 greenLog(`${++index}. ${keywords.join(' | ')}`);
             }else{
-                const joinParams = '';
+                let joinParams = '';
                 for(const param of params) {
                     if(params.length > 0) 
                         joinParams += 'ALPHABOT-CLI --';
@@ -27,7 +27,7 @@ module.exports = {
                     
                     if (params.indexOf(param) < params.length - 1) joinParams += ' | ';
                 }
-                greenLog(`${++index}. ${joinParams}`);
+                greenLog(`${++index}.${joinParams}`);
             }
             console.log(' --> ' + description);
         }
