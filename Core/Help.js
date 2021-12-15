@@ -29,7 +29,7 @@ module.exports = {
                 }
                 greenLog(`${++index}.${joinParams}`);
             }
-            console.log(' --> ' + description);
+            console.log(' 	⇒ ' + description);
         }
     }
 }
